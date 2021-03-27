@@ -4,7 +4,13 @@
 using namespace std;
 
 const bool nicknameValid(string& nickname) {
-	if ((nickname.length() < 4) || (nickname.length() > 25)) {
+	const int minNicknameLenght = 4;
+	const int maxNicknameLenght = 25;
+
+	if (nickname.empty()) {
+		return false;
+	}
+	if ((nickname.length() < minNicknameLenght) || (nickname.length() > maxNicknameLenght)) {
 		cout << "if 1" << endl; 
 		return false;
 	}
