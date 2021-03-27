@@ -4,8 +4,8 @@
 using namespace std;
 
 const bool nicknameValid(string& nickname) {
-	const int minNicknameLenght = 4;
-	const int maxNicknameLenght = 25;
+	static constexpr const int minNicknameLenght = 4;
+	static constexpr const int maxNicknameLenght = 25;
 
 	if (nickname.empty()) {
 		return false;
